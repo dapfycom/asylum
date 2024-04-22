@@ -52,8 +52,6 @@ const FloatingMarkers = () => {
             <li>NFT holders get revenue share from DEX</li>
           </ul>
         }
-        path={RouteNamesEnum.nfts}
-        noSoon={true}
       />
       <SingleMarker
         className={'sm:top-[52%] sm:left-[85%] top-[65%] left-[80%]'}
