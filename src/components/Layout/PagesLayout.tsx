@@ -8,8 +8,8 @@ import { Footer } from './Footer';
 
 const PagesLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div className='w-full h-screen flex flex-col justify-between'>
-      <div className='absolute top-0 left-0 w-full'>
+    <div className='w-full flex flex-col justify-between bg-gray-100'>
+      <div className='absolute top-0 left-0 w-full '>
         <div className='flex items-center justify-between w-full p-6 shadow-md'>
           <div>
             <NavLink to='/'>
@@ -34,7 +34,7 @@ const PagesLayout = ({ children }: PropsWithChildren) => {
           <Login />
         </div>
       </div>
-      <div className='container '>
+      <div className='container mt-20 '>
         <div className=' '>{children}</div>
       </div>
       <Footer />

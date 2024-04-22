@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 export const Layout = ({ children }: PropsWithChildren) => {
   return (
     <Provider store={store}>
-      <div>
+      <div className='bg-blue-200'>
         <main className='w-full '>{children}</main>
       </div>
     </Provider>

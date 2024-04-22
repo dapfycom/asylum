@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
-    <footer className='text-center pb-6'>
+    <footer className='text-center pb-6 '>
       <div className='footer-container'>
         <p>
           © {new Date().getFullYear()} <strong>Dapfy team</strong>. All rights

@@ -1,10 +1,9 @@
 import collectionImage from '@/assets/images/jeeter-collection.jpg';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import { useGetNFTsPrice } from './utils/hooks';
+import MintButton from './components/MintButton/MintButton';
+import ProgressMint from './components/Progress/ProgressMint';
+import Title from './components/Title/Title';
 
 export const NFTsPage = () => {
-  const {} = useGetNFTsPrice();
   return (
     <div>
       <div
@@ -12,9 +11,7 @@ export const NFTsPage = () => {
         className='flex flex-col items-center justify-center min-h-screen '
       >
         <div className='max-w-2xl w-full p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md'>
-          <h1 className='text-3xl font-bold text-center mb-4 dark:text-white'>
-            JEETER NFT 1/100
-          </h1>
+          <Title />
           <p className='text-gray-600 dark:text-gray-300 text-center mb-4'>
             100 cool pfp NFTs ready to JEET. Buy with $JEET token. NFT holders
             get revenue share from the upcoming DEX.
@@ -28,21 +25,9 @@ export const NFTsPage = () => {
               width={500}
             />
           </div>
-          <div className='mb-4'>
-            <Progress
-              className='h-2 rounded-lg bg-gray-200 dark:bg-gray-700'
-              value={70}
-            />
-            <div className='flex justify-between text-sm font-medium mt-2'>
-              <span className='text-gray-600 dark:text-gray-300'>70% Sold</span>
-              <span className='text-gray-600 dark:text-gray-300'>
-                30% Available
-              </span>
-            </div>
-          </div>
-          <div className='flex justify-center'>
-            <Button className='w-full sm:w-auto'>Purchase</Button>
-          </div>
+
+          <ProgressMint />
+          <MintButton />
         </div>
       </div>
     </div>

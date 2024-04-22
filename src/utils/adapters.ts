@@ -1,3 +1,5 @@
+import { EsdtPayment } from '@/types/scTypes';
+
 export const adaptBigUint = (bigUint: any): string => {
   return bigUint.toString() as string;
 };
@@ -6,13 +8,7 @@ export const adaptNumber = (number: any): number => {
   return number.toNumber() as number;
 };
 
-export const adaptTokenPayment = (
-  tokenPayment: any
-): {
-  amount: string;
-  token_identifier: string;
-  token_nonce: number;
-} => {
+export const adaptTokenPayment = (tokenPayment: any): EsdtPayment => {
   return {
     amount: adaptBigUint(tokenPayment.amount),
     token_identifier: tokenPayment.token_identifier,
