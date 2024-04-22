@@ -46,7 +46,7 @@ export const scQuery = async (
       abi: abiRegistry
     });
 
-    let interaction = contract.methods[funcName](args);
+    const interaction = contract.methods[funcName](args);
     const query = interaction.check().buildQuery();
     const queryResponse = await provider.queryContract(query);
 

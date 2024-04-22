@@ -1,16 +1,16 @@
+import { login } from '../../utils/actions.ts';
 import {
   GlobalDataEnum,
   GlobalSelectorEnum,
   WalletAdressEnum
 } from '../../utils/enums.ts';
-import { login, pingPongHandler } from '../../utils/actions.ts';
 import {
-  closeTransaction,
-  closeTemplateModal,
-  closeWalletTab,
-  reloadWalletWindow,
   cancelTrasaction,
+  closeTemplateModal,
+  closeTransaction,
+  closeWalletTab,
   notConfirmPem,
+  reloadWalletWindow,
   signMsg
 } from './actions.ts';
 

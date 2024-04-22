@@ -30,7 +30,7 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
-  // @ts-ignore
+  // @ts-expect-error - `noOverlay` and `noXClose` are custom props
 >(({ className, noOverlay, noXClose, children, ...props }, ref) => (
   <DialogPortal>
     {!noOverlay && <DialogOverlay />}

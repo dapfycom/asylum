@@ -1,6 +1,6 @@
 const createFromIconfontCN = (icon: any) => {
-  const { path, ...rest } = icon;
-  return (props: any) => {
+  const { path } = icon;
+  return () => {
     return <>{path}</>;
   };
 };
@@ -12,7 +12,7 @@ type IconProps = {
 };
 
 const createIcon = (props: IconProps) => {
-  const { viewBox, path, ...rest } = props;
+  const { viewBox, path } = props;
   const icon = {
     viewBox,
     path,

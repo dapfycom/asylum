@@ -1,5 +1,5 @@
+import { openProviderModal } from '../../utils/actions.ts';
 import { GlobalSelectorEnum, RoutesEnum } from '../../utils/enums.ts';
-import { openProviderModal, checkUrl } from '../../utils/actions.ts';
 
 describe('Check Ledger Modal', () => {
   beforeEach(async () => {

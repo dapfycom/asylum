@@ -22,7 +22,7 @@ const SingleMarker = ({
     <div>
       <div
         className={
-          `animate-bounce-slow fixed z-[20] cursor-pointer text-center flex flex-col items-center ` +
+          'animate-bounce-slow fixed z-[20] cursor-pointer text-center flex flex-col items-center ' +
           className
         }
         onClick={() => setIsOpen(true)}

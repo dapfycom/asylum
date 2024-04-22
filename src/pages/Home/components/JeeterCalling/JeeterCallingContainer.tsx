@@ -1,7 +1,7 @@
-import { soundoff, soundon } from "@/assets/icons";
-import sakura from "@/assets/sakura.mp3";
-import { useEffect, useRef, useState } from "react";
-import JeeterCalling from "./JeeterCalling";
+import { soundoff, soundon } from '@/assets/icons';
+import sakura from '@/assets/sakura.mp3';
+import { useEffect, useRef, useState } from 'react';
+import JeeterCalling from './JeeterCalling';
 const JeeterCallingContainer = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
@@ -22,13 +22,13 @@ const JeeterCallingContainer = () => {
 
   return (
     <div>
-      {" "}
-      <div className="absolute bottom-2 left-2 z-10">
+      {' '}
+      <div className='absolute bottom-2 left-2 z-10'>
         <img
           src={!isPlayingMusic ? soundoff : soundon}
-          alt="jukebox"
+          alt='jukebox'
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-          className="w-10 h-10 cursor-pointer object-contain"
+          className='w-10 h-10 cursor-pointer object-contain'
         />
       </div>
       <JeeterCalling

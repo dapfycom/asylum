@@ -1,8 +1,8 @@
 import {
   batchTransactions,
   checkOpenTabs,
-  initTransaction,
   login,
+  pingPongHandler,
   validateToast,
   validateTransaction
 } from '../../utils/actions.ts';
@@ -12,7 +12,6 @@ import {
   TransactionIndexEnum,
   WalletAdressEnum
 } from '../../utils/enums.ts';
-import { pingPongHandler } from '../../utils/actions.ts';
 
 describe('Sign with Keystore', () => {
   beforeEach(async () => {

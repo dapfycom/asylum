@@ -104,7 +104,7 @@ export class SmartContractInteraction {
   ): Interaction {
     const contractFunction = new ContractFunction(functionName);
 
-    let interaction = new Interaction(
+    const interaction = new Interaction(
       customContract || this.contract,
       contractFunction,
       arg
@@ -115,7 +115,7 @@ export class SmartContractInteraction {
   public scCall({ functionName, arg = [], gasL }: IScCallProps) {
     const contractFunction = new ContractFunction(functionName);
 
-    let interaction = new Interaction(this.contract, contractFunction, arg);
+    const interaction = new Interaction(this.contract, contractFunction, arg);
 
     return SmartContractInteraction.sendTransaction({
       interaction,
@@ -133,7 +133,7 @@ export class SmartContractInteraction {
     value,
     realValue
   }: IESDTTransferProps) {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     interaction.withSingleESDTTransfer(
       realValue
@@ -161,7 +161,7 @@ export class SmartContractInteraction {
     arg = [],
     gasL
   }: IESDTNFTTransferProps) {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     interaction.withSingleESDTNFTTransfer(
       TokenTransfer.nonFungible(token.collection, token.nonce)
@@ -180,7 +180,7 @@ export class SmartContractInteraction {
     arg = [],
     gasL
   }: IESDTNFTTransferProps & { quantity: number }) {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     interaction.withSingleESDTNFTTransfer(
       TokenTransfer.semiFungible(token.collection, token.nonce, quantity)
@@ -202,7 +202,7 @@ export class SmartContractInteraction {
     arg = [],
     gasL
   }: IEGLDPaymentProps) {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     return SmartContractInteraction.sendTransaction({
       interaction,
@@ -221,7 +221,7 @@ export class SmartContractInteraction {
     value,
     realValue
   }: IESDTTransferProps) {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     if (token.collection === 'EGLD') {
       return SmartContractInteraction.sendTransaction({
@@ -261,7 +261,7 @@ export class SmartContractInteraction {
   }: IScCallProps): Transaction {
     const contractFunction = new ContractFunction(functionName);
 
-    let interaction = new Interaction(this.contract, contractFunction, arg);
+    const interaction = new Interaction(this.contract, contractFunction, arg);
 
     const tx = SmartContractInteraction.createTransactionFromInteraction(
       interaction,
@@ -284,7 +284,7 @@ export class SmartContractInteraction {
     value,
     realValue
   }: IESDTTransferProps): Transaction {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     interaction.withSingleESDTTransfer(
       realValue
@@ -320,7 +320,7 @@ export class SmartContractInteraction {
     gasL,
     realValue
   }: IEGLDPaymentProps): Transaction {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     const tx = SmartContractInteraction.createTransactionFromInteraction(
       interaction,
@@ -343,7 +343,7 @@ export class SmartContractInteraction {
     arg = [],
     gasL
   }: IMultiESDTNFTTransferProps) {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     const tokensToTransfer = tokens.map((token) => {
       let tokenTransfer: TokenTransfer;
@@ -387,13 +387,13 @@ export class SmartContractInteraction {
   }: IwrapEgldAndEsdtTranferProps) {
     //wrap egld
     const wrapEgldFunctionName = 'wrapEgld';
-    let { address }: { address?: IAddress | null } =
+    const { address }: { address?: IAddress | null } =
       smartContractsConfig.wrapEGLDShard0;
 
     if (address) {
       const wrapeEgldContract = new SmartContract({ address: address });
 
-      let wrapInteraction = this.createInteraction(
+      const wrapInteraction = this.createInteraction(
         wrapEgldFunctionName,
         [],
         wrapeEgldContract
@@ -408,7 +408,7 @@ export class SmartContractInteraction {
 
       //esdt transfer
 
-      let esdtTranferInteraction = this.createInteraction(functionName, arg);
+      const esdtTranferInteraction = this.createInteraction(functionName, arg);
 
       const tokenIdentifier = tokensID.wegld;
 
@@ -437,7 +437,7 @@ export class SmartContractInteraction {
     arg = [],
     gasL
   }: IMultiESDTNFTTransferProps) {
-    let interaction = this.createInteraction(functionName, arg);
+    const interaction = this.createInteraction(functionName, arg);
 
     const tokensToTransfer = tokens.map((token) => {
       let tokenTransfer: TokenTransfer;

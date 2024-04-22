@@ -1,9 +1,8 @@
 import {
   checkOpenTabs,
-  checkUrl,
+  confimPem,
   initTransaction,
-  uploadFile,
-  confimPem
+  uploadFile
 } from '../../utils/actions.ts';
 import { GlobalDataEnum, GlobalSelectorEnum } from '../../utils/enums.ts';
 

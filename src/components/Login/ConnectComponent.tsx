@@ -1,5 +1,4 @@
 import {
-  LegerWalletIcon,
   MaiarAppIcon,
   MaiarDefiWalletIcon,
   WebWalletIcon,
@@ -29,34 +28,27 @@ import { useLocation } from 'react-router-dom';
 const webWalletLoginComponent = (
   <div className='flex items-center gap-2 h-full'>
     {' '}
-    <WebWalletIcon className='text-sm' mr='14px' fontSize={'21px'} /> MultiversX
-    Web Wallet{' '}
+    <WebWalletIcon /> MultiversX Web Wallet{' '}
   </div>
 );
 
 const XAliasLoginComponent = (
   <div className='flex items-center gap-2 h-full'>
     {' '}
-    <XAliasIcon mr='14px' fontSize={'16px'} /> Login with Google
+    <XAliasIcon /> Login with Google
   </div>
 );
-const legerLoginComponent = (
-  <div className='flex items-center gap-2 h-full'>
-    {' '}
-    <LegerWalletIcon mr='14px' fontSize={'21px'} /> Ledger{' '}
-  </div>
-);
+
 const mobileLoginComponent = (
   <div className='flex items-center gap-2 h-full'>
     {' '}
-    <MaiarAppIcon mr='14px' fontSize={'21px'} /> xPortal App{' '}
+    <MaiarAppIcon /> xPortal App{' '}
   </div>
 );
 const desktopLoginComponent = (
   <div className='flex items-center gap-2 h-full'>
     {' '}
-    <MaiarDefiWalletIcon mr='11.5px' fontSize={'23.5px'} /> MultiversX DeFi
-    Wallet{' '}
+    <MaiarDefiWalletIcon /> MultiversX DeFi Wallet{' '}
   </div>
 );
 

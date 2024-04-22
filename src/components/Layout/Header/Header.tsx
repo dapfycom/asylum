@@ -2,24 +2,6 @@ import { logo } from '@/assets/images';
 import { MxLink } from '@/components/MxLink';
 import { socialLinks } from '@/localConstants';
 
-const callbackUrl = `${window.location.origin}/unlock`;
-const onRedirect = undefined; // use this to redirect with useNavigate to a specific page after logout
-const shouldAttemptReLogin = false; // use for special cases where you want to re-login after logout
-const options = {
-  /*
-   * @param {boolean} [shouldBroadcastLogoutAcrossTabs=true]
-   * @description If your dApp supports multiple accounts on multiple tabs,
-   * this param will broadcast the logout event across all tabs.
-   */
-  shouldBroadcastLogoutAcrossTabs: true,
-  /*
-   * @param {boolean} [hasConsentPopup=false]
-   * @description Set it to true if you want to perform async calls before logging out on Safari.
-   * It will open a consent popup for the user to confirm the action before leaving the page.
-   */
-  hasConsentPopup: false
-};
-
 export const Header = () => {
   return (
     <header className='flex items-center justify-end container absolute top-10 left-0 right-0 z-10'>

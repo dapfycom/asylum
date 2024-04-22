@@ -31,7 +31,7 @@ export interface IFetchTransactionParams {
 export const fetchTransactions = async (
   params?: IFetchTransactionParams
 ): Promise<ITransacation[]> => {
-  const res = await axiosElrond.get<ITransacation[]>(`/transactions`, {
+  const res = await axiosElrond.get<ITransacation[]>('/transactions', {
     params: params
   });
   return res.data;
@@ -47,7 +47,7 @@ export const fetchTransactionByHash = async (
 export const fetchTransfers = async (
   params?: IFetchTransactionParams
 ): Promise<ITransacation[]> => {
-  const res = await axiosElrond.get<ITransacation[]>(`/transfers`, {
+  const res = await axiosElrond.get<ITransacation[]>('/transfers', {
     params: params
   });
   return res.data;

@@ -1,13 +1,10 @@
 import { Skeleton } from '@/components/ui/skeleton';
-import { calculatePercentage } from '@/utils/numbers';
 import { useGetLeftToMint } from '../../utils/hooks';
 
 const Title = () => {
   const { data, isLoading } = useGetLeftToMint();
   const total = 100;
 
-  const available = calculatePercentage(total, data);
-  const sold = total - available;
   return (
     <>
       {isLoading ? (

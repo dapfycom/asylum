@@ -10,19 +10,8 @@ import { useGLTF } from '@react-three/drei';
 
 import village from '@/assets/3d/volgar_village.glb';
 
-export function Village({
-  isRotating,
-  setIsRotating,
-  setCurrentStage,
-  currentFocusPoint,
-  ...props
-}: {
-  isRotating: boolean;
-  setIsRotating: (isRotating: boolean) => void;
-  setCurrentStage: (stage: number) => void;
-  currentFocusPoint: number;
-}) {
-  const { nodes, materials } = useGLTF(village);
+export function Village({ ...props }) {
+  const { nodes, materials } = useGLTF(village) as any;
 
   // const villageRef = useRef();
   // useFrame(({ clock }) => {

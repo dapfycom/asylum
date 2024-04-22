@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 
 import fuckerImg from '@/assets/images/fucker.png';
 import { Sky, Village } from '@/models';
@@ -24,7 +24,6 @@ export const Home = () => {
   };
 
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
-  const [skyRotation, setSkyRotation] = useState();
   return (
     <section className='w-full h-screen relative'>
       <FloatingMarkers />
@@ -35,7 +34,7 @@ export const Home = () => {
       />
       <JeeterCallingContainer />
       <Canvas
-        className={`w-full h-screen bg-transparent z-0 `}
+        className={'w-full h-screen bg-transparent z-0 '}
         camera={{ near: 0.1, far: 1000, fov: 100, position: [0, 0, 10] }}
       >
         <Suspense fallback={<Loader />}>
@@ -52,7 +51,6 @@ export const Home = () => {
 
           <Sky />
           <Village
-            // @ts-ignore
             position={islandPosition}
             rotation={[0.1, 4.7077, 0]}
             scale={islandScale}

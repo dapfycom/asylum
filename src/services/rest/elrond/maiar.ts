@@ -12,6 +12,6 @@ export const fetchSwapRate = async ([baseId, quoteId]: [
 };
 
 export const fetchMaiarPairs = async (): Promise<IMexPair[]> => {
-  const data = await fetchElrondData<IMexPair[]>(`mex/pairs`);
+  const data = await fetchElrondData<IMexPair[]>('mex/pairs');
   return data;
 };

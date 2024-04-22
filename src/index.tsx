@@ -4,5 +4,4 @@ import './styles/globals.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container as HTMLElement);
-// @ts-ignore
-root.render(<App />);
+root.render((<App />) as any);

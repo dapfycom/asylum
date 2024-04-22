@@ -22,7 +22,7 @@ export default function JeeterCalling({
 }) {
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      {/*  @ts-ignore */}
+      {/* @ts-expect-error  oXClose noOverlay  */}
       <DialogContent noXClose noOverlay className='w-full max-w-[300px]'>
         <div>
           <Card>
