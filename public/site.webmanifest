@@ -1,16 +1,16 @@
 {
-  "name": "MultiversX dApp Template",
-  "short_name": "MultiversX dApp",
+  "name": "JEETER ASYLUM $JEET",
+  "short_name": "JEETER ASYLUM",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/src/assets/favicon.ico",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/x-icon"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "https://thejeeters.com/banner.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ],
   "theme_color": "#ffffff",
