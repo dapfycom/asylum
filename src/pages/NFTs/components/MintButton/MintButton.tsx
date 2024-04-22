@@ -24,9 +24,7 @@ const MintButton = () => {
 
     const res = await mintJeeter(
       {
-        amount: new BigNumber(data.amount)
-          .multipliedBy(amount * 1.2)
-          .toString(),
+        amount: new BigNumber(data.amount).multipliedBy(amount).toString(),
         token_identifier: data.token_identifier,
         token_nonce: data.token_nonce
       },
